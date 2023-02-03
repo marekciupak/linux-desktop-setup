@@ -1,6 +1,6 @@
 # Linux Desktop setup
 
-My notes for GNU/Linux desktop machine setup :penguin:
+Notes for GNU/Linux desktop machine setup :penguin:
 
 ## Preparing installation media of Pop!_OS
 
@@ -29,7 +29,7 @@ sudo /sbin/isosize -x <device>
 sudo dd if=<device> count=<sector count> bs=<sector size> | sha256sum
 ```
 
-## Before conntecting to the network
+## Before connecting to the network
 
 ### Firewall
 
