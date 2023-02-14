@@ -46,3 +46,11 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 
 * IPv4: `1.1.1.2, 1.0.0.2`
 * IPv6: `2606:4700:4700::1112, 2606:4700:4700::1002`
+
+## Other
+
+* Show seconds in GNOME top panel
+
+    ```shell
+    gsettings set org.gnome.desktop.interface clock-show-seconds true
+    ```
