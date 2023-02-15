@@ -49,8 +49,9 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 
 ## Other
 
-* Show seconds in GNOME top panel
+* Show weekday and seconds in GNOME top panel
 
     ```shell
+    gsettings set org.gnome.desktop.interface clock-show-weekday true
     gsettings set org.gnome.desktop.interface clock-show-seconds true
     ```
