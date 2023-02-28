@@ -139,8 +139,22 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 * Install plugins:
 
     ```shell
-    # Rust
+    # install last version of Erlang (required for Elixir)
+    sudo apt install libwxgtk-webview3.0-gtk3-dev libssh-dev build-essential autoconf libncurses5-dev xsltproc fop libxml2-utils
+    asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
+    asdf list-all erlang    # check the latest version
+    asdf install erlang 25.2.3
+    asdf global erlang 25.2.3
+
+    # install last version of Elixir
+    asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+    asdf list-all elixir    # check the latest version
+    asdf install elixir 1.14.3
+    asdf global elixir 1.14.3
+
+    # install last version of Rust
     asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git
+    asdf list-all rust    # check the latest version
     asdf install rust 1.67.1
     asdf global rust 1.67.1
     ```
