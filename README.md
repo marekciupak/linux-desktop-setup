@@ -74,13 +74,13 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 
 * Edit `~/.zshrc` file and update `ZSH_THEME=` to:
 
-    ```
+    ```shell
     ZSH_THEME="agnoster"
     ```
 
 * Edit `~/.zshrc` file and the following lines at the end:
 
-    ```
+    ```shell
     export EDITOR='vim'
     
     DEFAULT_USER=`whoami`
@@ -111,11 +111,47 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 
 * Edit `~/.zshrc` file and the following lines at the end:
 
-    ```
+    ```shell
     # exa
     alias l="exa -a -l -H -S --time-style long-iso -m -g --color-scale --group-directories-first"
     alias lt="exa -a -l -H -S --time-style long-iso -m -g --color-scale --group-directories-first -T"
     ```
+
+### asdf
+
+* Install [asdf](https://asdf-vm.com/guide/getting-started.html):
+
+    ```shell
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.2
+    ```
+
+* Add the following to `~/.zshrc`:
+
+    ```shell
+    # asdf
+    . "$HOME/.asdf/asdf.sh"
+    # append completions to fpath
+    fpath=(${ASDF_DIR}/completions $fpath)
+    # initialise completions with ZSH's compinit
+    autoload -Uz compinit && compinit
+    ```
+
+* Install plugins:
+
+    ```shell
+    # Rust
+    asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git
+    asdf install rust 1.67.1
+    asdf global rust 1.67.1
+    ```
+
+#### Updating versions in the future
+
+```shell
+# to display the list of available versions, update plugins and use `list-all`, ex:
+asdf plugin-update --all
+asdf list-all ruby
+```
 
 ### Other
 
