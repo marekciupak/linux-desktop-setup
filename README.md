@@ -101,6 +101,22 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
     setopt SHARE_HISTORY            # share history between sessions
     ```
 
+### Exa
+
+* Install exa:
+
+    ```shell
+    sudo apt install exa
+    ```
+
+* Edit `~/.zshrc` file and the following lines at the end:
+
+    ```
+    # exa
+    alias l="exa -a -l -H -S --time-style long-iso -m -g --color-scale --group-directories-first"
+    alias lt="exa -a -l -H -S --time-style long-iso -m -g --color-scale --group-directories-first -T"
+    ```
+
 ### Other
 
 * Show weekday and seconds in GNOME top panel
