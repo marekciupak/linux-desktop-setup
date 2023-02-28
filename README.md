@@ -139,6 +139,9 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 * Install plugins:
 
     ```shell
+    # necessary if you have already installed asdf plugins some time ago
+    asdf plugin-update --all
+    
     # install last version of Erlang (required for Elixir)
     sudo apt install libwxgtk-webview3.0-gtk3-dev libssh-dev build-essential autoconf libncurses5-dev xsltproc fop libxml2-utils
     asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
@@ -158,14 +161,6 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
     asdf install rust 1.67.1
     asdf global rust 1.67.1
     ```
-
-#### Updating versions in the future
-
-```shell
-# to display the list of available versions, update plugins and use `list-all`, ex:
-asdf plugin-update --all
-asdf list-all ruby
-```
 
 ### Other
 
