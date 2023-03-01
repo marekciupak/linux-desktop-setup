@@ -103,14 +103,15 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 
 ### Git
 
-Set you username and email in Git:
+Set you username, email and specify signing key in Git:
 
 ```shell
 git config --global user.name "Orrin the Knight"
 git config --global user.email "email@example.com"
+git config --global user.signingkey $KEYID
 ```
 
-:warning: Don't forget to replace _"Orrin the Knight"_ and _"email@example.com"_ with your own data.
+:warning: Don't forget to replace _"Orrin the Knight"_, _"email@example.com"_ and _`$KEYID`_ with your own data.
 
 #### GitHub
 
