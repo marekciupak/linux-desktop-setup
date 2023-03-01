@@ -82,13 +82,13 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 
     ```shell
     export EDITOR='vim'
-    
+
     DEFAULT_USER=`whoami`
-    
+
     HISTFILE=$HOME/.zsh_history
     HISTSIZE=10000
     SAVEHIST=10000
-    
+
     setopt APPEND_HISTORY           # append rather than overwrite history file.
     setopt EXTENDED_HISTORY         # save timestamp and runtime information
     setopt HIST_EXPIRE_DUPS_FIRST   # allow dups, but expire old ones when I hit HISTSIZE
@@ -141,7 +141,7 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
     ```shell
     # necessary if you have already installed asdf plugins some time ago
     asdf plugin-update --all
-    
+
     # install last version of Erlang (required for Elixir)
     sudo apt install libwxgtk-webview3.0-gtk3-dev libssh-dev build-essential autoconf libncurses5-dev xsltproc fop libxml2-utils
     asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
@@ -169,4 +169,37 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
     ```shell
     gsettings set org.gnome.desktop.interface clock-show-weekday true
     gsettings set org.gnome.desktop.interface clock-show-seconds true
+    ```
+
+### VS Code
+
+* Install VS Code: https://code.visualstudio.com/#alt-downloads.
+
+* Press <kbd>Cmd</kbd> + <kbd>p</kbd>, type `> Preferences: Open User Settings (JSON)`, press <kbd>Enter</kbd>, and paste the following settings to `settings.json`:
+
+    ```json
+    {
+        "workbench.startupEditor": "none",
+        "telemetry.telemetryLevel": "off",
+        "settingsSync.keybindingsPerPlatform": false,
+        "json.schemaDownload.enable": false,
+        "update.showReleaseNotes": false,
+        "workbench.settings.enableNaturalLanguageSearch": false,
+        "workbench.enableExperiments": false,
+        "workbench.cloudChanges.continueOn": "off",
+        "workbench.cloudChanges.autoResume": "off",
+        "editor.tabSize": 2,
+        "editor.autoClosingBrackets": "never",
+        "editor.rulers": [
+            120
+        ],
+        "explorer.confirmDragAndDrop": false,
+        "explorer.confirmDelete": false,
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "files.trimFinalNewlines": true,
+        "editor.autoClosingOvertype": "never",
+        "editor.autoClosingQuotes": "never",
+        "editor.minimap.enabled": false
+    }
     ```
