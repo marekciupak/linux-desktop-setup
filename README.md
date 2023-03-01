@@ -112,6 +112,36 @@ git config --global user.email "email@example.com"
 
 :warning: Don't forget to replace _"Orrin the Knight"_ and _"email@example.com"_ with your own data.
 
+#### GitHub
+
+* Assign a specific key for authentication in `~/.ssh/config`:
+
+    ```
+    Host github.com
+      IdentitiesOnly yes
+      IdentityFile ~/.ssh/id_rsa_yubikey.pub
+    ```
+
+* Verify and pin the GitHub's public SSH key:
+
+    ```shell
+    ssh git@github.com -vvv
+    ```
+
+    If you are doing this for the first time, you should be asked for the server public key fingerprint.
+
+    You can find it on the official GitHub page: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints:
+
+
+    ```
+    SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8 (RSA)
+    SHA256:br9IjFspm1vxR3iA35FWE+4VTyz1hYVLIE2t1/CeyWQ (DSA - deprecated)
+    SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM (ECDSA)
+    SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU (Ed25519)
+    ```
+
+    Copy-paste the relevant fingerprint and press <kbd>Enter</kbd>.
+
 ### Exa
 
 * Install exa:
