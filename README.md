@@ -101,6 +101,22 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
     setopt SHARE_HISTORY            # share history between sessions
     ```
 
+#### fzf
+
+* Install [fzf](https://github.com/junegunn/fzf):
+
+    ```shell
+    sudo apt install fzf
+    ```
+
+* Edit `~/.zshrc` file and the following lines at the end:
+
+    ```shell
+    # fzf (based on the instruction in /usr/share/doc/fzf/README.Debian)
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh
+    ```
+
 ### Git
 
 Set you username, email and specify signing key in Git:
