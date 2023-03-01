@@ -54,8 +54,8 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
 * Install Zsh and set it as a default shell:
 
     ```shell
-    brew install zsh zsh-completions
-    chsh -s /bin/zsh
+    sudo apt install zsh
+    chsh -s $(which zsh)
     ```
 
     :warning: You may need to logout and login again to load Zsh shell.
@@ -100,6 +100,17 @@ Cloudflare’s public DNS resolver that blocks malicious content: https://develo
     setopt INC_APPEND_HISTORY       # write after each command
     setopt SHARE_HISTORY            # share history between sessions
     ```
+
+### Git
+
+Set you username and email in Git:
+
+```shell
+git config --global user.name "Orrin the Knight"
+git config --global user.email "email@example.com"
+```
+
+:warning: Don't forget to replace _"Orrin the Knight"_ and _"email@example.com"_ with your own data.
 
 ### Exa
 
