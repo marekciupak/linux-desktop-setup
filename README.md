@@ -218,6 +218,12 @@ git config --global user.signingkey $KEYID
     asdf list-all rust    # check the latest version
     asdf install rust 1.67.1
     asdf global rust 1.67.1
+    
+    # install last version of Node.js
+    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    asdf list-all nodejs  # check the latest version (or check the latest LTS version on https://nodejs.org/en)
+    asdf install nodejs 18.16.0
+    asdf global nodejs 18.16.0
     ```
 
 ### Other
