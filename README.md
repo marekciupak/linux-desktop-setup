@@ -224,6 +224,7 @@ git config --global user.signingkey $KEYID
     asdf list-all nodejs  # check the latest version (or check the latest LTS version on https://nodejs.org/en)
     asdf install nodejs 18.16.0
     asdf global nodejs 18.16.0
+    npm install -g npm
     ```
 
 ### Other
