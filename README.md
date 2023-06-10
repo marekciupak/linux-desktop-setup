@@ -200,30 +200,27 @@ git config --global user.signingkey $KEYID
     # necessary if you have already installed asdf plugins some time ago
     asdf plugin-update --all
 
-    # install last version of Erlang (required for Elixir)
+    # install the latest version of Erlang (required for Elixir)
     sudo apt install libwxgtk-webview3.0-gtk3-dev libssh-dev build-essential autoconf libncurses5-dev xsltproc fop libxml2-utils
     asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
-    asdf list-all erlang    # check the latest version
-    asdf install erlang 25.2.3
-    asdf global erlang 25.2.3
+    asdf install erlang latest
+    asdf global erlang latest
 
-    # install last version of Elixir
+    # install the latest version of Elixir
     asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-    asdf list-all elixir    # check the latest version
-    asdf install elixir 1.14.3
-    asdf global elixir 1.14.3
+    asdf install elixir latest
+    asdf global elixir latest
 
-    # install last version of Rust
+    # install the latest version of Rust
     asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git
-    asdf list-all rust    # check the latest version
-    asdf install rust 1.67.1
-    asdf global rust 1.67.1
+    asdf install rust latest
+    asdf global rust latest
     
-    # install last version of Node.js
+    # install the latest LTS version of Node.js
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-    asdf list-all nodejs  # check the latest version (or check the latest LTS version on https://nodejs.org/en)
-    asdf install nodejs 18.16.0
-    asdf global nodejs 18.16.0
+    open https://nodejs.org/en # check the latest LTS version
+    asdf install nodejs latest:18
+    asdf global nodejs latest:18
     npm install -g npm
     ```
 
