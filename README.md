@@ -235,8 +235,8 @@ git config --global user.signingkey $KEYID
     # install the latest LTS version of Node.js
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     open https://nodejs.org/en # check the latest LTS version
-    asdf install nodejs latest:18
-    asdf global nodejs latest:18
+    asdf install nodejs latest:20
+    asdf global nodejs latest:20
     npm install -g npm
     ```
 
