@@ -4,22 +4,22 @@ Notes for GNU/Linux desktop machine setup :penguin:
 
 ## Preparing installation media of Pop!_OS
 
-* Images and checksums: https://pop.system76.com/
+* Images and checksums: https://system76.com/pop/download/
 * ISO signing key fingerprint: https://github.com/pop-os/iso#requirements
 
 ```shell
-mkdir pop-os_22.04_amd64_intel_21 && cd "$_"
+mkdir pop-os_24.04_amd64_generic_22 && cd "$_"
 
-wget https://iso.pop-os.org/22.04/amd64/intel/21/pop-os_22.04_amd64_intel_21.iso
-wget https://iso.pop-os.org/22.04/amd64/intel/21/SHA256SUMS
-wget https://iso.pop-os.org/22.04/amd64/intel/21/SHA256SUMS.gpg
+wget https://iso.pop-os.org/24.04/amd64/generic/22/pop-os_24.04_amd64_generic_22.iso
+wget https://iso.pop-os.org/24.04/amd64/generic/22/SHA256SUMS
+wget https://iso.pop-os.org/24.04/amd64/generic/22/SHA256SUMS.gpg
 
 gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 63C46DF0140D738961429F4E204DD8AEC33A7AFF
 gpg --verify SHA256SUMS.gpg SHA256SUMS
 
 sha256sum --check SHA256SUMS
 
-sudo dd if=pop-os_22.04_amd64_intel_21.iso of=<device> bs=4M; sync
+sudo dd if=pop-os_24.04_amd64_generic_22.iso of=<device> bs=4M; sync
 ```
 
 ### Calculating checksum of already created media:
